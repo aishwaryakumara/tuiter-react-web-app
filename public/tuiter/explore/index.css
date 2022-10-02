@@ -1,0 +1,147 @@
+body {
+    font-family: "Arial";
+    background-color: Black;
+    color: White;
+}
+
+body input::placeholder {
+    color: white;
+    position: absolute;
+    left: 10%;
+    bottom: 18%;
+    font-size: 15px;
+}
+
+.zindex-bring-to-front {
+    position: relative;
+    top: 57px;
+    left: 5%;
+    z-index: 1000;
+}
+
+.wd-main-title {
+    margin-top: 0px;
+    margin-left: 16px;
+}
+
+.wd-search-icon {
+    position: relative;
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+}
+
+.wd-search-bar {
+    position: absolute;
+    border-radius: 30px;
+    background-color: darkgray;
+    border: 3px rgb(47, 51, 54);
+    width: 82%;
+    top: 80px;
+    margin-left: 16px;
+
+}
+.wd-gear {
+    font-size:30px;
+    color:rgb(29,161,242);
+    position: absolute;
+    right: 12px;
+    top: 78px;
+}
+
+
+.wd-nav-tabs{
+    margin-bottom: 0px;
+    color: rgb(110, 118, 125);
+    padding-left: 0px;
+}
+
+.wd-nav-tabs li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 15px;
+    padding: 16px;
+    margin-top: 50px;
+
+}
+
+.wd-nav-tabs .wd-selected {
+    color: rgb(29,161,242);
+
+}
+
+.wd-nav-tabs > .wd-selected > .wd-selected-ul {
+    padding-bottom: 16px;
+    border-bottom: solid 4px rgb(29,161,242);
+}
+
+.flex-container {
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+}
+.flex-box {
+    padding: 10px 10px 10px 0px;
+
+}
+
+.flex-container>.flex-box> .grid-col-right-sidebar > .wd-image {
+    height: 100px;
+    width: 100px;
+    float: right;
+    position: absolute;
+    border-radius: 30px;
+    margin-right: 16px;
+}
+
+.wd-title {
+    color: rgb(110, 118, 125);
+    font-size: 13px ;
+    margin-left: 16px;
+
+}
+
+
+.wd-options-interpunct{
+    color: rgb(110, 118, 125);
+    float:right;
+}
+
+
+.wd-title2 {
+    color: White;
+    font-size: 13px ;
+
+}
+
+
+.wd-rectangle {
+    position: relative;
+}
+
+
+.flex-container>.flex-box >.wd-title2 > .wd-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 3px;
+    border: none;
+    margin-left: 16px;
+
+
+}
+
+.flex-container>.flex-box > .wd-title2 >.wd-icon2 {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+    border: none;
+
+}
+
+.grid-col-right-sidebar {
+    width: 10%;
+    float: right;
+}
