@@ -2,7 +2,12 @@ body {
     font-family: "Arial";
     background-color: Black;
     color: White;
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    overflow: auto;
 }
+
 
 body input::placeholder {
     color: white;
@@ -45,7 +50,8 @@ body input::placeholder {
     font-size:30px;
     color:rgb(29,161,242);
     position: absolute;
-    right: 12px;
+    margin-right: 12px;
+    right:12px;
     top: 78px;
 }
 
