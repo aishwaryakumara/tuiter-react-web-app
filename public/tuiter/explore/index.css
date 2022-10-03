@@ -81,7 +81,7 @@ body input::placeholder {
     border-style: solid;
 }
 .flex-box {
-    padding: 10px 10px 10px 0px;
+    padding: 10px 0px 10px 0px;
 
 }
 
@@ -89,7 +89,7 @@ body input::placeholder {
     height: 100px;
     width: 100px;
     float: right;
-    position: absolute;
+    position: relative;
     border-radius: 30px;
     margin-right: 16px;
 }
@@ -105,6 +105,7 @@ body input::placeholder {
 .wd-options-interpunct{
     color: rgb(110, 118, 125);
     float:right;
+    margin-right: 16px;
 }
 
 
