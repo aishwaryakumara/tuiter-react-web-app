@@ -1,8 +1,8 @@
 body {
     font-family: "Arial";
-    /*background-color: Black;
+    background-color: Black;
     color: White;
-    border-width: 1px;
+    /*border-width: 1px;
     border-color: rgb(47, 51, 54);
     border-style: solid;
     overflow: auto;*/
@@ -12,6 +12,29 @@ body {
     background-color: #0d6efd;
     color: White;
     border-radius: 20px;
+}
+
+
+.btn-follow {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+.wd-list-bg {
+    background-color: black;
+    color: white;
+}
+
+.wd-list-bg {
+    background-color: black;
+    color: white;
+}
+
+.wd-list-follow-bg {
+    background-color:#20262A ;
+    color: white;
+    border-color:#20262A;
 }
 
 
@@ -27,20 +50,27 @@ body {
     z-index: 1000;
 }
 
+body input::placeholder {
+    color: white;
+}
+
 .wd-main-title {
     margin-top: 0px;
     margin-left: 16px;
 }
 
+.wd-music-title {
+    bottom: 70px;
+    left: 6px;
+    position: absolute;
+    color: white;
+}
+
 
 .wd-search-bar {
-    position: absolute;
-    border-radius: 30px;
-    background-color: darkgray;
+    background-color: #20262A;
     border: 3px rgb(47, 51, 54);
-    width: 82%;
-    top: 80px;
-    margin-left: 16px;
+    color: white;
 
 }
 .wd-gear {
@@ -73,8 +103,8 @@ body {
 
 }
 
-.wd-nav-tabs > .wd-selected > .wd-selected-ul {
-    padding-bottom: 16px;
+.wd-selected-ul {
+    padding-bottom: 8px;
     border-bottom: solid 4px rgb(29,161,242);
 }
 
@@ -123,16 +153,15 @@ body {
     position: relative;
 }
 
+.wd-icon {
+    height: 15px;
+    width: 18px;
+}
 
-.flex-container>.flex-box >.wd-title2 > .wd-icon {
-    height: 20px;
-    width: 20px;
-    position: relative;
-    top: 3px;
-    border: none;
-    margin-left: 16px;
-
-
+.wd-icon2 {
+    height: 25px;
+    width: 25px;
+    top: 10px
 }
 
 .flex-container>.flex-box > .wd-title2 >.wd-icon2 {
