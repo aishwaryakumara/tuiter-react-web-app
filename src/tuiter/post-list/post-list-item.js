@@ -39,19 +39,19 @@ const PostListItem = (
 
                     <ul className="nav   align-items-center nav-justified">
                         <li className="nav-item">
-                            <a className="nav-link text-muted">
+                            <a href="/some/valid/uri" className="nav-link text-muted">
                                 <i className="bi bi-chat"></i> {post.comments} </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted">
+                            <a href="/some/valid/uri" className="nav-link text-muted">
                                 <i className="bi bi-arrow-repeat"></i> {post.retuits}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted">
+                            <a href="/some/valid/uri" className="nav-link text-muted">
                                 <i className="bi bi-heart"></i> {post.likes}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted ">
+                            <a href="/some/valid/uri" className="nav-link text-muted ">
                                 <i className="bi bi-upload"></i>    </a>
                         </li>
 

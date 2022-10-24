@@ -18,19 +18,19 @@ const ExploreComponent = () => {
             </div>
             <ul className="nav nav-pills mb-2">
                 <li className="nav-item">
-                    <a className="nav-link active">For You</a>
+                    <a  href="/some/valid/uri" className="nav-link active">For You</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Trending</a>
+                    <a href="/some/valid/uri" className="nav-link">Trending</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">News</a>
+                    <a href="/some/valid/uri" className="nav-link">News</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Sports</a>
+                    <a href="/some/valid/uri" className="nav-link">Sports</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Entertainment</a>
+                    <a href="/some/valid/uri" className="nav-link">Entertainment</a>
                 </li>
             </ul>
             <div className="position-relative mb-2">
