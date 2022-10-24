@@ -27,7 +27,7 @@ const posts = [
         comments: '965',
         retuits: '2.4K',
         likes: '4K'
-         },]
+         }]
 ;
 
 export default posts;
