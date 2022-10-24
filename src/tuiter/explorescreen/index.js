@@ -21,16 +21,16 @@ const ExploreComponent = () => {
                     <a  href="/some/valid/uri" className="nav-link active">For You</a>
                 </li>
                 <li className="nav-item">
-                    <a href="/some/valid/uri" className="nav-link">Trending</a>
+                    <a href="/some/valid/uri" className="nav-link text-muted">Trending</a>
                 </li>
                 <li className="nav-item">
-                    <a href="/some/valid/uri" className="nav-link">News</a>
+                    <a href="/some/valid/uri" className="nav-link text-muted">News</a>
                 </li>
                 <li className="nav-item">
-                    <a href="/some/valid/uri" className="nav-link">Sports</a>
+                    <a href="/some/valid/uri" className="nav-link text-muted">Sports</a>
                 </li>
                 <li className="nav-item">
-                    <a href="/some/valid/uri" className="nav-link">Entertainment</a>
+                    <a href="/some/valid/uri" className="nav-link text-muted">Entertainment</a>
                 </li>
             </ul>
             <div className="position-relative mb-2">
