@@ -1,5 +1,3 @@
-import {Link} from "react-router-dom";
-import Nav from "../nav";
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list/index.js";
 import ExploreComponent from "./explorescreen";

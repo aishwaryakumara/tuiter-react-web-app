@@ -21,32 +21,32 @@ const NavigationSidebar = () => {
                 <i className="bi bi-hash"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Explore </span>
             </Link>
-            <Link to="#" className={`list-group-item
+            <Link to="/" className={`list-group-item
                     ${active === 'notifications'?'active':''}`}>
                 <i className="bi bi-bell-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Notifications </span>
             </Link>
-            <Link to="#" className={`list-group-item
+            <Link to="/" className={`list-group-item
                     ${active === 'messages'?'active':''}`}>
                 <i className="bi bi-chat-square-quote-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Messages </span>
             </Link>
-            <Link to="#" className={`list-group-item
+            <Link to="/" className={`list-group-item
                     ${active === 'bookmarks'?'active':''}`}>
                 <i className="bi bi-bookmarks-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Bookmarks </span>
             </Link>
-            <Link to="#" className={`list-group-item
+            <Link to="/" className={`list-group-item
                     ${active === 'lists'?'active':''}`}>
                 <i className="bi bi-list-ul"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Lists </span>
             </Link>
-            <Link to="#" className={`list-group-item
+            <Link to="/" className={`list-group-item
                             ${active === 'profile'?'active':''}`}>
                 <i className="bi bi-person-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Profile </span>
             </Link>
-            <Link to="#" className={`list-group-item
+            <Link to="/" className={`list-group-item
                             ${active === 'more'?'active':''}`}>
                 <i className="bi bi-plus-circle-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> More </span>

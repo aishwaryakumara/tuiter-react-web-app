@@ -10,7 +10,7 @@ const PostListItem = (
         <ul>
             <div className="row pt-2">
                 <div className="col-1 ps-0 ">
-                    <img width={50} className=" float-left float-start rounded-circle" src={`/images/${post.avatarIcon}`}/>
+                    <img alt="" width={50} className=" float-left float-start rounded-circle" src={`/images/${post.avatarIcon}`}/>
                 </div>
                 <div className="col-11">
                     <div className="fw-bold">{post.userName}
@@ -25,8 +25,8 @@ const PostListItem = (
 
                     <div className="mt-2 border border-secondary rounded">
 
-                        <img className=" w-100 border-bottom border-secondary rounded "
-                             src={`/images/${post.image}`} height="340px" />
+                        <img alt="" className=" w-100 border-bottom border-secondary rounded "
+                             src={`/images/${post.image} ` } height="340px" />
                             <div
                                 className="w-100 ps-3 pe-2 fw-bolder align-items-center">
                                 {post.title}
@@ -39,22 +39,22 @@ const PostListItem = (
 
                     <ul className="nav   align-items-center nav-justified">
                         <li className="nav-item">
-                            <a className="nav-link text-muted" href="#"><i
+                            <a className="nav-link text-muted"><i
                                 className="fa-regular fa-comment"></i>
                                 <i className="bi bi-chat"></i> {post.comments}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted" href="#"><i
+                            <a className="nav-link text-muted"><i
                                 className="fa-solid fa-retweet"></i>
                                 <i className="bi bi-arrow-repeat"></i> {post.retuits}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted" href="#"><i
+                            <a className="nav-link text-muted"><i
                                 className="fa-regular fa-heart"></i>
                                 <i className="bi bi-heart"></i> {post.likes}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted " href="#"><i
+                            <a className="nav-link text-muted "><i
                                 className="fa-solid fa-arrow-up-from-bracket"></i>
                                 <i className="bi bi-upload"></i>    </a>
                         </li>
