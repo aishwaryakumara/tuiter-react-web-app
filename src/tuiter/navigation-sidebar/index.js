@@ -41,11 +41,11 @@ const NavigationSidebar = () => {
                 <i className="bi bi-list-ul"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Lists </span>
             </a>
-            <a href="/tuiter/profilescreen" className={`list-group-item
-                            ${active === 'profilescreen'?'active':''}`}>
-                <i className="bi bi-person-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
+            <Link to="/tuiter/profilescreen" className={`list-group-item
+                    ${active === 'profilescreen'?'active':''}`}>
+                <i className="bi bi-hash"></i><span>&nbsp;&nbsp;&nbsp;</span>
                 <span className="d-none d-xxl-inline-block d-xl-inline-block d-lg-none "> Profile </span>
-            </a>
+            </Link>
             <a href="/some/valid/uri" className={`list-group-item
                             ${active === 'more'?'active':''}`}>
                 <i className="bi bi-plus-circle-fill"></i><span>&nbsp;&nbsp;&nbsp;</span>
