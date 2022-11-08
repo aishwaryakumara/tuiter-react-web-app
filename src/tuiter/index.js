@@ -4,16 +4,21 @@ import ExploreComponent from "./explorescreen";
 import HomeComponent from "./homescreen";
 import ProfileComponent from "./profile-component";
 import {Routes, Route} from "react-router";
-
+import React from "react";
 import whoReducer
     from "./reducers/who-reducer";
 import tuitsReducer from "./tuits/tuits-reducer";
+import profileReducer from "./reducers/profile-reducer";
 import { configureStore }
     from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
 import EditProfileComponent from "./edit-profile";
+
+
 const store = configureStore(
-    {reducer: {who: whoReducer, tuits: tuitsReducer}});
+    {reducer: {who: whoReducer,
+                        tuits: tuitsReducer,
+                        profile: profileReducer}});
 
 
 function Tuiter() {

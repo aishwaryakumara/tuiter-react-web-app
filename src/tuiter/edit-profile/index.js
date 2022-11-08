@@ -1,8 +1,10 @@
 import React from "react";
 import EditProfileComponentList from "./edit-profile-component-list";
-import editprofileArray from "./editprofile.json"
+//import editprofileArray from "./editprofile.json"
+import {useSelector} from "react-redux";
 
 const EditProfileComponent = () => {
+    const editprofileArray = useSelector(state => state.profile)
     return (
         <div className="list-group">
             {

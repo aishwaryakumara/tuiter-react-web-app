@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-
 const ProfileComponentList = (
     {
         profile
@@ -9,12 +8,12 @@ const ProfileComponentList = (
 ) => {
 
     return (<div>
-            <div className="mt-2 pt-0 pb-5 position-realtive ">
-                <div className="h4">{profile.firstName} {profile.lastName} </div>
-                <div className="h10 text-muted">{profile.nooftuits} Tuits</div>
-                <img  alt="" className="pt-2 border-secondary rounded" src={`/images/${profile.bannerimage}`} height = {300} width={650}/>
+            <div className="h4">{profile.firstName} {profile.lastName} </div>
+            <div className="h10 text-muted">{profile.nooftuits} Tuits</div>
+            <div className="mt-2 pt-0 pb-5 position-relative ">
+                <img  alt="" className="pt-2 w-100 border-secondary rounded" src={`/images/${profile.bannerimage}`} height = {300} />
 
-                <div className=" pt-4 ps-4   position-absolute top-50 h-100 ">
+                <div className=" pt-5 ps-4   position-absolute top-50 h-100 ">
                     <img   alt="profile" className="float-left float-start  rounded-circle" src={`/images/${profile.profilepic}`} height ={100} width={100} />
                 </div>
 
@@ -37,8 +36,9 @@ const ProfileComponentList = (
                 <div className=" fw-bold">{profile.userName}
                     <div className="text-muted"> {profile.handle} </div> </div> </div>
                 <div className="pt-3">{profile.bio}</div>
-                <div className="text-muted">{profile.website}</div>
                 <div className="text-muted pt-1 "><i className="bi bi-geo-alt text-secondary pe-2"/> {profile.location}      <span className="text-muted p-5"><i className="bi bi-balloon text-secondary pe-2"/> {profile.dob}</span>  <span className="text-muted"> <i className="bi bi-calendar3 text-secondary pe-2"/> {profile.dateJoined}</span>   </div>
+                <br/>
+                <div className="text-muted">{profile.website}</div>
                 <div className=" fw-bold pt-1 pl-2"> {profile.followers}   <span className="text-muted">Following</span>  <span className=" fw-bold p-5 p-2"> {profile.following}<span className="text-muted ">  Followers</span> </span>
 
                 </div>

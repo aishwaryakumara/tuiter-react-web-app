@@ -1,43 +1,151 @@
-import React from "react";
-
+import React, {useState} from "react";
+//import {editprofile} from "../reducers/profile-reducer"
+import {useDispatch, useSelector} from "react-redux";
+import currentUserReducer from "./current-user";
+import {useNavigate} from "react-router";
+import {updateProfile} from "../reducers/profile-reducer";
 
 const EditProfileComponentList = (
-    {
-        profile
-    }
+    {profile}
 ) => {
+        const [firstName, setfirstName] = useState(profile.firstName)
+        const changefirstName = (event) => {
+        const newfirstName = event.target.value
+        setfirstName(newfirstName)
+        console.log(newfirstName)
+        }
+        const [lastName, setlastName] = useState(profile.lastName)
+        const changelastName = (event) => {
+        const newlastName = event.target.value
+        setfirstName(newlastName)
+        console.log(newlastName)
+        }
+        const [bio, setBio] = useState(profile.bio)
+        const changeBio = (event) => {
+        const newBio = event.target.value
+        setBio(newBio)
+        console.log(newBio)
+        }
+        const [location, setlocation] = useState(profile.location)
+        const changelocation = (event) => {
+        const newlocation = event.target.value
+        setlocation(newlocation)
+        console.log(newlocation)
+        }
+        const [website, setwebsite] = useState(profile.website)
+        const changewebsite = (event) => {
+        const newwebsite = event.target.value
+        setwebsite(newwebsite)
+        console.log(newwebsite)
+        }
+        const [dob, setdob] = useState(profile.dob)
+        const changedob = (event) => {
+        const newdob = event.target.value
+        setdob(newdob)
+        console.log(newdob)
+        }
 
-    return (<div>
-            <h3>Edit profile</h3>
-            <div className="mt-2 pt-0 pb-5 position-realtive ">
-                <div className="h4">{profile.firstName} {profile.lastName} </div>
-                <div className="h10 text-muted">{profile.nooftuits} Tuits</div>
-                <img  alt="" className="pt-2 border-secondary rounded" src={`/images/${profile.bannerimage}`} height = {300} width={650}/>
+    const dispatch = useDispatch();
+    const updateUserProfile = (event) => {
+        dispatch(updateProfile({
+                                   ...profile,
+                                   firstName:firstName,
+                                   lastName: lastName,
+                                   bio: bio,
+                                   location: location,
+                                   website: website,
+                                   dob:dob
+                               }));
+    }
 
-                <div className=" pt-4 ps-4   position-absolute top-50 h-100 ">
+    let navigate = useNavigate();
+    const routeChange = () => {
+        let path = `../profilescreen`;
+        navigate(path);
+    }
+
+
+        return (<div>
+
+            <div className="float-right">
+                    <button className="rounded-pill btn btn-primary float-end mb-2  me-1 fw-bold text-white"
+                            onClick={(e) => {
+                                //updateUserProfile(e);
+                                routeChange()}}>Save</button>
+            </div>
+
+                <div >
+
+                    <button className="btn col-1"
+                            onClick={(e) => routeChange()}><i className="bi bi-x-lg"></i>
+                    </button>
+
+                    <h4>Edit profile</h4>
+                </div>
+
+                <div className="mt-2 pt-0 pb-5 position-relative ">
+
+                <img  alt="" className="w-100 pt-2 border-secondary rounded" src={profile.bannerimage} height = {300}/>
+
+                <div className=" pt-5 ps-4 position-absolute top-50 h-100 ">
                     <img   alt="profile" className="float-left float-start  rounded-circle" src={`/images/${profile.profilepic}`} height ={100} width={100} />
                 </div>
 
-            </div>
-
-
-            <div className="pt-2">
-                <div className="fw-bold">{profile.firstName} {profile.lastName}
-                    <span className="ps-3 "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor" className="bi bi-patch-check-fill" color="blue"
-                                                 viewBox="0 0 16 16">
-                            <path
-                                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
-                        </svg></span>
-                    <div className=" fw-bold">{profile.userName}
-                        <div className="text-muted"> {profile.handle} </div> </div> </div>
-                <div className="pt-3">{profile.bio}</div>
-                <div className="text-muted">{profile.website}</div>
-                <div className="text-muted pt-1 "><i className="bi bi-geo-alt text-secondary pe-2"/> {profile.location}      <span className="text-muted p-5"><i className="bi bi-balloon text-secondary pe-2"/> {profile.dob}</span>  <span className="text-muted"> <i className="bi bi-calendar3 text-secondary pe-2"/> {profile.dateJoined}</span>   </div>
-                <div className=" fw-bold pt-1 pl-2"> {profile.followers}   <span className="text-muted">Following</span>  <span className=" fw-bold p-5 p-2"> {profile.following}<span className="text-muted ">  Followers</span> </span>
-
                 </div>
-            </div>
+
+                <div className ="position-relative mt-4">
+                    <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >First Name</span>
+                    <input
+                        defaultValue={profile.firstName}
+                        onChange={(e) => setfirstName(e.target.value)}
+                        className="form-control ps-2 pt-4"
+                        />
+                </div>
+
+                <div className ="position-relative mt-4">
+                    <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Last Name</span>
+                    <input
+                        defaultValue={profile.lastName}
+                        onChange={(e) => setlastName(e.target.value)}
+                        className="form-control ps-2 pt-4"
+                        />
+                </div>
+
+                <div className ="position-relative mt-4">
+                    <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Bio</span>
+                    <input
+                        defaultValue={profile.bio}
+                        onChange={(e) => setBio(e.target.value)}
+                        className="form-control ps-2 pt-4"
+                        />
+                </div>
+
+                <div className ="position-relative mt-4">
+                    <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Location</span>
+                    <input
+                        defaultValue={profile.location}
+                        onChange={(e) => setlocation(e.target.value)}
+                        className="form-control ps-2 pt-4"
+                       />
+                </div>
+
+                <div className ="position-relative mt-4">
+                    <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Website</span>
+                    <input
+                        defaultValue={profile.website}
+                        onChange={(e) => setwebsite(e.target.value)}
+                        className="form-control ps-2 pt-4"
+                        />
+                </div>
+
+                <div className ="position-relative mt-4">
+                    <span className ="pt-1 h6 position-absolute ps-2 text-secondary " >Date of Birth</span>
+                    <input
+                        defaultValue="2018-07-22"
+                        onChange={(e) => setdob(e.target.value)}
+                        className="form-control ps-2 pt-4"
+                        type = "date"/>
+                </div>
 
         </div>
     );

@@ -1,0 +1,17 @@
+[
+  {
+    "_id": 123,
+    "firstName": "Aishwarya",
+    "lastName": "Kumar",
+    "bannerimage": "banne.jpeg",
+    "profilepic": "Relativity_Black.jpeg",
+    "handle": "@aishwaryakumar",
+    "bio": "Foodie",
+    "location":"Boston, MA",
+    "dob":"04 October 1996",
+    "dateJoined":"October 2009",
+    "followers":"200",
+    "following":"300",
+    "nooftuits": "6556"
+  }
+]
