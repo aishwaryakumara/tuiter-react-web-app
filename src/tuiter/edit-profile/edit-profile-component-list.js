@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 //import {editprofile} from "../reducers/profile-reducer"
-import {useDispatch, useSelector} from "react-redux";
-import currentUserReducer from "./current-user";
+import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router";
 import {updateProfile} from "../reducers/profile-reducer";
 
@@ -9,44 +8,13 @@ const EditProfileComponentList = (
     {profile}
 ) => {
         const [firstName, setfirstName] = useState(profile.firstName)
-        const changefirstName = (event) => {
-        const newfirstName = event.target.value
-        setfirstName(newfirstName)
-        console.log(newfirstName)
-        }
-        const [lastName, setlastName] = useState(profile.lastName)
-        const changelastName = (event) => {
-        const newlastName = event.target.value
-        setfirstName(newlastName)
-        console.log(newlastName)
-        }
-        const [bio, setBio] = useState(profile.bio)
-        const changeBio = (event) => {
-        const newBio = event.target.value
-        setBio(newBio)
-        console.log(newBio)
-        }
-        const [location, setlocation] = useState(profile.location)
-        const changelocation = (event) => {
-        const newlocation = event.target.value
-        setlocation(newlocation)
-        console.log(newlocation)
-        }
-        const [website, setwebsite] = useState(profile.website)
-        const changewebsite = (event) => {
-        const newwebsite = event.target.value
-        setwebsite(newwebsite)
-        console.log(newwebsite)
-        }
-        const [dob, setdob] = useState(profile.dob)
-        const changedob = (event) => {
-        const newdob = event.target.value
-        setdob(newdob)
-        console.log(newdob)
-        }
-
+    const [lastName, setlastName] = useState(profile.lastName)
+    const [bio, setBio] = useState(profile.bio)
+    const [location, setlocation] = useState(profile.location)
+    const [website, setwebsite] = useState(profile.website)
+    const [dob, setdob] = useState(profile.dob)
     const dispatch = useDispatch();
-    const updateUserProfile = (event) => {
+    const updateUserProfile = () => {
         dispatch(updateProfile({
                                    ...profile,
                                    firstName:firstName,
@@ -70,7 +38,7 @@ const EditProfileComponentList = (
             <div className="float-right">
                     <button className="rounded-pill btn btn-primary float-end mb-2  me-1 fw-bold text-white"
                             onClick={(e) => {
-                                //updateUserProfile(e);
+                                updateUserProfile(e);
                                 routeChange()}}>Save</button>
             </div>
 
