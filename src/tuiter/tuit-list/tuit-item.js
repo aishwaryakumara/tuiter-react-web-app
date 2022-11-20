@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
 import {deleteTuit} from "../tuits/tuits-reducer";
+import TuitStats from "./tuitstats";
 
 const TuitListItem = (
     {
@@ -42,32 +43,8 @@ const TuitListItem = (
                     </div>
                     <br/>
 
+                    <TuitStats tuit={tuit}/>
 
-                    <div className="nav   align-items-center nav-justified">
-                        <li className="nav-item">
-                            <a href="/some/valid/uri" className="nav-link text-muted">
-                                <i className="bi bi-chat"></i> {tuit.replies} </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/some/valid/uri" className="nav-link text-muted">
-                                <i className="bi bi-arrow-repeat"></i> {tuit.retuits}</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/some/valid/uri" className="nav-link text-muted">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                     fill="red" className="bi bi-heart-fill"
-                                     viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                </svg> {tuit.likes}</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/some/valid/uri" className="nav-link text-muted ">
-                                <i className="bi bi-upload"></i>    </a>
-                        </li>
-
-
-                    </div>
                 </div>
             </div>
 
