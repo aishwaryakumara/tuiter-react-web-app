@@ -2,9 +2,7 @@ import React from "react";
 
 
 const PostSummaryItem = (
-    {
-        post
-    }
+    {post}
 ) => {
     return(
         <li className="list-group-item">
